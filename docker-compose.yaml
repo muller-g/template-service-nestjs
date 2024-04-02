@@ -7,3 +7,8 @@ services:
       - 3000:3000
     volumes:
       - .:/home/node/app
+
+  db:
+    image: mongo
+    environment:
+      MONGO_URL: ${MONGO_URL}
